@@ -102,6 +102,9 @@ a { color: inherit; text-decoration: none; }
   .projects-grid { grid-template-columns: 1fr !important; }
   .stat-strip { grid-template-columns: 1fr 1fr !important; }
   .nav-links { display: none !important; }
+  .hero-grid { flex-direction: column-reverse !important; }
+  .hero-photo { width: 220px !important; flex-basis: auto !important; }
+  .plgrid { grid-template-columns: 1fr !important; }
 }
 </style>
 </head>
@@ -173,7 +176,7 @@ function Nav() {
           <a href="#" style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: '1.25rem', color: 'var(--teal-deeper)', letterSpacing: '-0.01em' }}>Camden HB</a>
           <div style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
             <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
-              {[['Work','#work'],['About','#about'],['Publications','#publications']].map(([l,h]) => (
+              {[['Work','#work'],['PL','#pl'],['About','#about'],['Publications','#publications']].map(([l,h]) => (
                 <a key={h} href={h} style={{ fontFamily: 'var(--font-sans)', fontSize: '0.9375rem', color: 'var(--ink-muted)', fontWeight: 500, transition: 'color var(--fast)' }}>{l}</a>
               ))}
             </div>
@@ -189,25 +192,34 @@ function Nav() {
 function Hero() {
   return (
     <section style={{ padding: 'clamp(64px,10vw,120px) var(--px) clamp(40px,6vw,64px)', maxWidth: 'var(--max-w)', margin: '0 auto' }}>
-      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'var(--teal-light)', borderRadius: 'var(--r-full)', padding: '5px 14px', marginBottom: '28px' }}>
-        <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--teal)', display: 'inline-block', flexShrink: 0 }} />
-        <span style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--teal-dark)' }}>Learning product leader · Educator · Science communicator</span>
-      </div>
-      <h1 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--display)', lineHeight: 1.08, letterSpacing: '-0.025em', color: 'var(--ink)', maxWidth: '880px', marginBottom: '28px' }}>
-        Hi, I'm Camden Hanzlick-Burton.{' '}
-        <span style={{ color: 'var(--teal-dark)' }}>Learning something new every day.</span>
-      </h1>
-      <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--lg)', lineHeight: 1.75, color: 'var(--ink-muted)', maxWidth: '620px', marginBottom: '44px', fontWeight: 300 }}>
-        I'm a learning scientist and PMP-certified product leader who has taught the classroom, written the curriculum, and now ships the platform — keeping the learner at the center from prototype to national scale.
-      </p>
-      <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-        <Button variant="coral" size="lg" href="#work">See the work</Button>
-        <Button variant="outline" size="lg" href="#contact">Say hello</Button>
-      </div>
-      <div style={{ display: 'flex', gap: '10px', marginTop: '64px' }}>
-        {PALETTE.map((c, i) => (
-          <div key={i} style={{ width: i === 0 ? '48px' : '12px', height: '12px', borderRadius: 'var(--r-full)', background: c, flexShrink: 0 }} />
-        ))}
+      <div className="hero-grid" style={{ display: 'flex', gap: '56px', alignItems: 'center' }}>
+        <div style={{ flex: '1 1 480px', minWidth: 0 }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'var(--teal-light)', borderRadius: 'var(--r-full)', padding: '5px 14px', marginBottom: '28px' }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--teal)', display: 'inline-block', flexShrink: 0 }} />
+            <span style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--teal-dark)' }}>Learning product leader · Educator · Science communicator</span>
+          </div>
+          <h1 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--display)', lineHeight: 1.08, letterSpacing: '-0.025em', color: 'var(--ink)', marginBottom: '28px' }}>
+            Hi, I'm Camden.{' '}
+            <span style={{ color: 'var(--teal-dark)' }}>Learning something new every day.</span>
+          </h1>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--lg)', lineHeight: 1.75, color: 'var(--ink-muted)', maxWidth: '620px', marginBottom: '44px', fontWeight: 300 }}>
+            I'm a learning scientist and PMP-certified product leader who has taught the classroom, written the curriculum, and now ships the platform — keeping the learner at the center from prototype to national scale.
+          </p>
+          <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+            <Button variant="coral" size="lg" href="#work">See the work</Button>
+            <Button variant="outline" size="lg" href="#contact">Say hello</Button>
+          </div>
+          <div style={{ display: 'flex', gap: '10px', marginTop: '64px' }}>
+            {PALETTE.map((c, i) => (
+              <div key={i} style={{ width: i === 0 ? '48px' : '12px', height: '12px', borderRadius: 'var(--r-full)', background: c, flexShrink: 0 }} />
+            ))}
+          </div>
+        </div>
+        <div className="hero-photo" style={{ flex: '0 0 300px', width: '300px' }}>
+          <div style={{ position: 'relative', borderRadius: 'var(--r-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-md)', border: '1px solid var(--border-light)' }}>
+            <img src="assets/headshot.jpg" alt="Camden Hanzlick-Burton" style={{ display: 'block', width: '100%', height: 'auto', aspectRatio: '2 / 3', objectFit: 'cover' }} />
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -367,6 +379,75 @@ function WorkSection() {
   );
 }
 
+/* ── Professional learning showcase ────────────── */
+const PL_SHOTS = [
+  {
+    img: 'assets/workshop.jpg',
+    caption: 'Facilitating a live workshop session',
+    course: 'In the room',
+  },
+  {
+    img: 'assets/ai-essentials-title.png',
+    caption: 'Opening slide, Session 1',
+    course: 'AI Essentials for Educators',
+  },
+  {
+    img: 'assets/ai-essentials-activity.png',
+    caption: '"Where are you today?" — a risk/opportunity gallery-walk activity',
+    course: 'AI Essentials for Educators',
+  },
+  {
+    img: 'assets/groupwork-title.png',
+    caption: 'Course opener',
+    course: 'Equitable Groupwork',
+  },
+  {
+    img: 'assets/groupwork-agenda.png',
+    caption: 'Session agenda: status, equity, and assigning competence',
+    course: 'Equitable Groupwork',
+  },
+  {
+    img: 'assets/presenting.jpg',
+    caption: 'Presenting to a room of teachers and coaches',
+    course: 'In the room',
+  },
+];
+
+function PLShotCard({ shot, colorIdx }) {
+  const accent = PALETTE[colorIdx % PALETTE.length];
+  const dark   = DARK[colorIdx % DARK.length];
+  return (
+    <div style={{ background: 'var(--white)', borderRadius: 'var(--r-lg)', overflow: 'hidden', border: '1px solid var(--border-light)', boxShadow: 'var(--shadow-sm)' }}>
+      <div style={{ aspectRatio: '4 / 3', overflow: 'hidden', background: 'var(--gray-50)' }}>
+        <img src={shot.img} alt={shot.caption} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+      </div>
+      <div style={{ padding: '14px 16px' }}>
+        <div style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: dark, marginBottom: '4px' }}>{shot.course}</div>
+        <div style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--sm)', color: 'var(--ink-muted)', lineHeight: 1.5 }}>{shot.caption}</div>
+      </div>
+    </div>
+  );
+}
+
+function PLSection() {
+  return (
+    <div id="pl" style={{ borderBottom: '1px solid var(--border-light)' }}>
+      <div className="section">
+        <div style={{ marginBottom: '16px' }}>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--pink)', marginBottom: '10px' }}>Professional learning</p>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h1)', lineHeight: 1.15, letterSpacing: '-0.02em', color: 'var(--ink)' }}>Sessions I've designed and led.</h2>
+        </div>
+        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.7, color: 'var(--ink-muted)', maxWidth: '640px', marginBottom: '36px' }}>
+          A few snapshots from two courses I built for the Knowles Teacher Initiative — <strong>AI Essentials for Educators</strong> and <strong>Equitable Groupwork</strong> — plus a couple of shots from the room.
+        </p>
+        <div className="plgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+          {PL_SHOTS.map((s, i) => <PLShotCard key={s.img} shot={s} colorIdx={i} />)}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ── About ─────────────────────────────────────── */
 function AboutSection() {
   const skills = [
@@ -393,7 +474,11 @@ function AboutSection() {
             </p>
             <Button variant="yellow" href="#contact">Work with me</Button>
           </div>
-          <div style={{ flex: '1 1 340px', minWidth: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+          <div style={{ flex: '1 1 340px', minWidth: 0 }}>
+            <div style={{ borderRadius: 'var(--r-lg)', overflow: 'hidden', marginBottom: '14px', border: '1px solid rgba(255,255,255,0.12)' }}>
+              <img src="assets/group.jpg" alt="Camden with fellow facilitators at a conference" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
             {skills.map(s => (
               <div key={s.label} style={{ background: 'rgba(255,255,255,0.07)', borderRadius: 'var(--r-lg)', padding: '20px', border: '1px solid rgba(255,255,255,0.12)', backdropFilter: 'blur(4px)' }}>
                 <div style={{ width: '28px', height: '4px', background: s.color, borderRadius: '2px', marginBottom: '14px' }} />
@@ -401,6 +486,7 @@ function AboutSection() {
                 <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--sm)', color: 'rgba(255,255,255,0.6)', margin: 0, lineHeight: 1.6 }}>{s.desc}</p>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </div>
@@ -508,6 +594,7 @@ function App() {
       <Hero />
       <ProofStrip />
       <WorkSection />
+      <PLSection />
       <AboutSection />
       <CredStrip />
       <PubsSection />
