@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Camden Hanzlick-Burton — Learning Product Leader | EdTech</title>
-<meta name="description" content="Camden Hanzlick-Burton is a learning scientist and PMP-certified learning product leader in EdTech — AI in education, learning experience design, and professional learning shipped at national scale.">
+<meta name="description" content="Camden Hanzlick-Burton is a learning scientist and PMP-certified learning product leader in EdTech — AI in education, learning experience design, and professional learning that actually changes practice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
@@ -176,7 +176,7 @@ function Nav() {
           <a href="#" style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: '1.25rem', color: 'var(--teal-deeper)', letterSpacing: '-0.01em' }}>Camden HB</a>
           <div style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
             <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
-              {[['Work','#work'],['PL','#pl'],['About','#about'],['Publications','#publications']].map(([l,h]) => (
+              {[['Work','#work'],['Professional Learning','#pl'],['About','#about'],['Publications','#publications']].map(([l,h]) => (
                 <a key={h} href={h} style={{ fontFamily: 'var(--font-sans)', fontSize: '0.9375rem', color: 'var(--ink-muted)', fontWeight: 500, transition: 'color var(--fast)' }}>{l}</a>
               ))}
             </div>
@@ -200,10 +200,10 @@ function Hero() {
           </div>
           <h1 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--display)', lineHeight: 1.08, letterSpacing: '-0.025em', color: 'var(--ink)', marginBottom: '28px' }}>
             Hi, I'm Camden.{' '}
-            <span style={{ color: 'var(--teal-dark)' }}>Learning something new every day.</span>
+            <span style={{ color: 'var(--teal-dark)' }}>You'll learn something new every day if you're not careful.</span>
           </h1>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--lg)', lineHeight: 1.75, color: 'var(--ink-muted)', maxWidth: '620px', marginBottom: '44px', fontWeight: 300 }}>
-            I'm a learning scientist and PMP-certified product leader who has taught the classroom, written the curriculum, and now ships the platform — keeping the learner at the center from prototype to national scale.
+            I'm a learning scientist and PMP-certified product leader who's taught in the classroom, written curriculum, and now builds the products — keeping the learner at the center from prototype to scale.
           </p>
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
             <Button variant="coral" size="lg" href="#work">See the work</Button>
@@ -227,9 +227,9 @@ function Hero() {
 
 /* ── Proof strip ───────────────────────────────── */
 const STATS = [
-  { n: '560', label: 'schools in the network my team builds for', color: 'var(--teal)' },
+  { n: '560', label: "schools my team's work reaches", color: 'var(--teal)' },
   { n: '$1M', label: 'STEM robotics rollout to 180 schools — on time, on budget', color: 'var(--coral)' },
-  { n: '2', label: 'NIH grants ($500K+ each) delivered as published curriculum', color: 'var(--pink)' },
+  { n: '$1M+', label: 'in NIH-funded curriculum delivered across two grants', color: 'var(--pink)' },
   { n: '13+', label: 'years from Title I classroom to national network', color: 'var(--orange)' },
 ];
 function ProofStrip() {
@@ -251,75 +251,66 @@ function ProofStrip() {
 /* ── Case studies ──────────────────────────────── */
 const PROJECTS = [
   {
-    title: 'Building the AI literacy pathway for a 560-school network',
+    title: 'Staying ahead of AI in education, on purpose',
     org: 'Digital Promise · Verizon Innovative Learning Schools',
-    description: 'Role-differentiated AI literacy for teachers, coaches, and school leaders — with LLM-powered educator tools I built on Playlab and direct OpenAI/Anthropic APIs.',
-    tags: ['AI product', 'User segmentation', 'Prompt engineering', 'Scale'],
+    description: "Not a single shipped product — an ongoing practice of turning fast-moving AI research into role-differentiated learning for teachers, coaches, and school leaders across a 560-school network.",
+    tags: ['AI literacy', 'Practitioner + product', 'LLM tools', 'Ongoing practice'],
     detail: [
-      ['The problem', 'A 560-school network needed AI literacy fast — and a first-year teacher, an instructional coach, and a superintendent do not need the same module. One-size-fits-all PL was going to fit no one.'],
-      ['What I built', 'A role-differentiated pathway translating the AI Literacy Framework into shippable professional learning, plus the LLM-powered educator tools behind it — built on Playlab and direct OpenAI/Anthropic APIs. I designed the prompts, the flows, and the data feedback loop.'],
-      ['How I decided', 'Like a product: user segments first, a design-to-release cadence, and an evidence loop feeding every iteration.'],
-      ['The result', 'AI literacy shipped across the network as a living product — releases on a cadence, refined by what the evidence loop surfaces, not by hunch.'],
+      ["Why it's not really \"a product\"", "AI in education is moving fast enough that figuring it out once isn't really an option. So this is closer to a practice than a project: I read the research, go to conferences, and adapt what I know into whatever context needs it — teacher-facing courses, leader briefings, our STEM robotics curriculum, one-off requests from schools that want more specific guidance. A first-year teacher, an instructional coach, and a superintendent aren't getting the same thing from me, because they're not asking the same question."],
+      ['What that looks like day to day', "Role-differentiated content built on the AI Literacy Framework, plus LLM-powered educator tools I built on Playlab and direct OpenAI/Anthropic APIs — I designed the prompts, the flows, and the feedback loop behind them."],
+      ["The honest answer on the hard part", "I don't have AI in education figured out, and I don't think anyone does yet. What I have is a practice: stay informed, try things, bring both a practitioner's and a product person's read to what I'm seeing, and expect to keep adjusting as the field changes under us."],
     ],
   },
   {
     title: 'The Evidence of Learning framework: proving PL actually moved practice',
     org: 'Digital Promise',
-    description: 'Measurement infrastructure that replaced ad hoc reporting with artifact-based evidence of practice change — 80% team adoption in year one.',
+    description: 'Replaced self-reported surveys with a measurement system that triangulates three kinds of evidence — 80% team adoption in year one.',
     tags: ['Product analytics', 'Outcome measurement', 'Org adoption'],
     detail: [
-      ['The problem', 'Professional learning reporting was ad hoc. We could say what we delivered — not whether anyone taught differently on Monday.'],
-      ['What I built', 'An artifact-based measurement system tracking transfer at the individual, school, and network level, replacing anecdotes with evidence traceable to actual practice change.'],
-      ['How I decided', 'Adoption was the metric that mattered: if the team would not use it, it measured nothing. So it was designed around existing workflows, not bolted on top of them.'],
-      ['The result', '80% team adoption in the first year. This is the case study that says: I don’t just ship — I know if it worked.'],
+      ['The problem', "We didn't have a good way to know whether professional learning was actually landing — just self-reported surveys, which tell you how people feel about their competence, not whether it changed."],
+      ['Three ways I triangulated it', "Validated self-efficacy surveys, built on statements already validated in other research rather than ones I made up. Artifact review, where teachers and coaches submit real evidence — from a PD session, a coaching call — and get assessed against it. And live observation: watching coaches and principals in the room or the classroom."],
+      ['The result', "Put together, that's a real picture of whether practice changed, not just whether people said it did. 80% of the team adopted it in year one."],
     ],
   },
   {
-    title: 'A $1M STEM robotics rollout to 180 schools — on time, on budget',
+    title: 'A $1M robotics rollout to 180 schools, on time and on budget',
     org: 'Digital Promise',
-    description: 'Hummingbird and micro:bit making-and-coding kits into 180 schools: a multi-vendor deployment run end to end.',
-    tags: ['Program delivery', 'Vendor management', 'PMP'],
+    description: 'Hummingbird and micro:bit making-and-coding kits into 180 schools, annotated against our own computational-thinking and AI-literacy frameworks.',
+    tags: ['Program delivery', 'Vendor management', 'PMP', 'Curriculum design'],
     detail: [
-      ['The problem', 'Get $1M of physical making-and-coding kits — Hummingbird and micro:bit — into 180 schools, across multiple vendors, without the timeline or the scope slipping.'],
-      ['What I built', 'The rollout logic: sequencing, vendor coordination, and the constructionist learning rationale that kept the kits tied to real classroom learning instead of closet shelves.'],
-      ['How I decided', 'PMP discipline on scope — every "small addition" was priced against the delivery date before it got a yes.'],
-      ['The result', '180 schools equipped, on time and on budget. Physical plus digital, at scale, end to end.'],
+      ['What we were solving for', "Bring hands-on making-and-coding hardware into 180 schools in a way that worked whatever a school already had going — a supplement if they had a makerspace or robotics program, a stand-alone core experience if they didn't."],
+      ['How it came together', "I annotated the vendor's curriculum against our own computational-thinking and AI-literacy frameworks, so schools got more than a kit — they got a way to teach the thinking behind it. I owned the project end to end and coordinated closely with the vendor to customize curriculum and training for our schools."],
+      ['The result', 'Every deadline hit, on budget, across all 180 schools.'],
     ],
   },
   {
-    title: 'Designing neuroscience students can hold in their hands',
+    title: 'Making neuroscience something students can hold',
     org: 'Backyard Brains · NIH-funded',
-    description: 'Phenomenon-driven K–12 neuroscience and machine-learning curriculum built on SpikerBox and NeuroRobot hardware — funded by two $500K+ NIH grants.',
-    tags: ['0–1 product', 'Curriculum R&D', 'Hardware + software', 'Python'],
+    description: 'Phenomenon-based K–12 neuroscience and machine-learning curriculum built on SpikerBox and NeuroRobot hardware, funded by two NIH grants.',
+    tags: ['0–1 curriculum', 'Hardware + software', 'Python', 'Teacher PD'],
     detail: [
-      ['The problem', 'Neuroscience in K–12 is usually a diagram of a neuron. Real experimental data — spikes you can hear, robots you can program — was locked behind lab budgets schools don’t have.'],
-      ['What I built', 'Phenomenon-driven curriculum around SpikerBox and NeuroRobot hardware, from requirements gathered through teacher user research to launched units evaluated with rubrics. A true 0-to-1: research grant in, classroom product out.'],
-      ['How I decided', 'Teachers were the users. Their constraints — time, budget, prep — drove every design call, including the low-cost remote labs I published on in JUNE (the Journal of Undergraduate Neuroscience Education).'],
-      ['The result', 'Two $500K+ NIH grants delivered on time and on budget as shipped, evaluated curriculum — plus a peer-reviewed publication.'],
+      ['The access problem', "Neuroscience is usually the field kids don't get access to — expensive equipment, treated as an elective if it's taught at all."],
+      ['What I built', "Phenomenon-based curriculum on Backyard Brains' SpikerBox and NeuroRobot hardware, so students worked with real experimental data instead of a textbook description of it. I also published on low-cost remote versions of these labs in the Journal of Undergraduate Neuroscience Education."],
+      ['The reach', 'Professional development that got teachers across the country using it, and the work grew into new tools connecting neuroscience to machine learning and AI.'],
     ],
   },
   {
-    title: 'Co-authoring a biology program used nationwide',
+    title: 'Co-writing a biology textbook used nationwide',
     org: 'BSCS Science Learning · Kendall Hunt',
-    description: 'Curriculum writer on BSCS Biology: Understanding for Life — a published, NGSS-aligned high school program.',
+    description: 'Primary writer on BSCS Biology: Understanding for Life — a new, NGSS-aligned high school textbook now used in classrooms across the country.',
     tags: ['Content design', 'Standards alignment', 'Editorial pipeline'],
     detail: [
-      ['The problem', 'A national biology program has to work in thousands of classrooms the authors will never see — which means storyline architecture and standards alignment have to be airtight before it prints.'],
-      ['What I built', 'Published units within a rigorous production pipeline: phenomenon-first sequencing, NGSS storyline architecture, and writing to an exacting style spec across a large author team.'],
-      ['How I decided', 'Inside a real publishing pipeline, the craft is collaboration — holding your voice to the spec so the program reads as one product, not forty authors.'],
-      ['The result', 'A polished, published program in classrooms nationwide. Proof I can ship inside someone else’s production system, not just my own.'],
+      ['The short version', "I was a primary writer on BSCS Biology: Understanding for Life, a brand-new textbook from BSCS Science Learning and Kendall Hunt, built around phenomenon-based science learning and aligned to the Next Generation Science Standards. It's used in districts across the country now — a strange thing, seeing your own lessons show up in someone else's classroom."],
     ],
   },
   {
-    title: 'From one classroom to a national curriculum: the teacher’s throughline',
-    org: 'Summit Public Schools · Olathe · Knowles',
-    description: 'Title I teaching in downtown Seattle with 20+ home languages, project-based learning, and the awards that came from putting learners first.',
-    tags: ['User empathy', 'PBL', 'Equity', 'The origin story'],
+    title: 'Letting students build the thing, then present it',
+    org: 'Digital Promise',
+    description: 'A capstone experience and student-led convening where students designed a prototype that mattered to their own community and presented it to school and community leaders.',
+    tags: ['0–1 product', 'Student voice', 'Convening design'],
     detail: [
-      ['The context', '20+ home languages in one Title I classroom in downtown Seattle. That’s not a challenge you solve with a worksheet — it’s one you design for.'],
-      ['What I did', 'Project-based learning built for that room, and mentorship that stuck: I walked 18 students all the way through graduation.'],
-      ['The recognition', 'The National Outstanding New Biology Teacher Award, the Kansas Outstanding Biology Teacher Award, and a Knowles Teaching Fellowship.'],
-      ['Why it matters', 'This is the bedrock under every product decision I make. I don’t have to imagine the user on the other end of an edtech product — I taught them for years.'],
+      ['What it was', "A capstone experience and a student-led convening where students designed a prototype that meant something in their own community — not a hypothetical assignment, an actual project — and presented it to school and community leaders."],
+      ['Why it mattered', "Students engaging directly with what technology could and couldn't do for something they cared about, then standing in front of the people who could actually act on it. Genuinely one of the best things I've worked on."],
     ],
   },
 ];
@@ -369,7 +360,7 @@ function WorkSection() {
           <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h1)', lineHeight: 1.15, letterSpacing: '-0.02em', color: 'var(--ink)' }}>Learning products, shipped.</h2>
         </div>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.7, color: 'var(--ink-muted)', maxWidth: '640px', marginBottom: '36px' }}>
-          Six stories, one pattern: start with who's struggling, build the thing, measure whether practice actually changed.
+          I sit where research, strategy, and rapid prototyping meet. I work with our strategy and finance team on what gets funded, with our research team on what the evidence says, and with our prototyping team on what's actually worth testing — from first insight to something that scales across the network. The work below is what's come out of that.
         </p>
         <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(320px,1fr))', gap: '24px', alignItems: 'start' }}>
           {PROJECTS.map((p, i) => <ProjectCard key={p.title} project={p} colorIdx={i} />)}
@@ -438,7 +429,7 @@ function PLSection() {
           <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h1)', lineHeight: 1.15, letterSpacing: '-0.02em', color: 'var(--ink)' }}>Sessions I've designed and led.</h2>
         </div>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.7, color: 'var(--ink-muted)', maxWidth: '640px', marginBottom: '36px' }}>
-          A few snapshots from two courses I built for the Knowles Teacher Initiative — <strong>AI Essentials for Educators</strong> and <strong>Equitable Groupwork</strong> — plus a couple of shots from the room.
+          A few snapshots from courses and sessions I've built and led — <strong>AI Essentials for Educators</strong> and <strong>Equitable Groupwork</strong> among them — plus a couple of shots from the room.
         </p>
         <div className="plgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
           {PL_SHOTS.map((s, i) => <PLShotCard key={s.img} shot={s} colorIdx={i} />)}
@@ -454,7 +445,7 @@ function AboutSection() {
     { label: 'AI product & prompt engineering', color: 'var(--teal)', desc: 'LLM-powered educator tools on Playlab and direct OpenAI/Anthropic APIs. Python when it’s useful. I build with the tools, not just about them.' },
     { label: 'Learning design & measurement', color: 'var(--coral)', desc: 'Turning learning science into products — and building the evidence systems that prove practice actually changed.' },
     { label: 'Program delivery at scale', color: 'var(--yellow)', desc: 'PMP-certified. Multi-vendor, multi-year, physical-plus-digital rollouts that land on time and on budget.' },
-    { label: 'Science communication', color: 'var(--pink)', desc: 'Podcasting, improv, and a decade of making hard ideas land. Complex ≠ complicated.' },
+    { label: 'Science communication', color: 'var(--pink)', desc: "Podcasting, improv, and years of practice making hard ideas land with people who didn't sign up to learn them." },
   ];
   return (
     <div id="about" style={{ background: 'var(--teal-deeper)', color: '#fff' }}>
@@ -462,15 +453,15 @@ function AboutSection() {
         <div className="about-grid" style={{ display: 'flex', gap: '64px', flexWrap: 'wrap', alignItems: 'flex-start' }}>
           <div style={{ flex: '1 1 340px', minWidth: 0 }}>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--yellow)', marginBottom: '14px' }}>About</p>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h1)', lineHeight: 1.15, letterSpacing: '-0.02em', color: '#fff', marginBottom: '24px' }}>Classroom → curriculum → platform.</h2>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h1)', lineHeight: 1.15, letterSpacing: '-0.02em', color: '#fff', marginBottom: '24px' }}>Classroom → curriculum → product.</h2>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--lg)', lineHeight: 1.75, color: 'rgba(255,255,255,0.85)', marginBottom: '18px', fontWeight: 300 }}>
-              I spent years teaching STEM in Title I classrooms — including one in downtown Seattle with more than 20 home languages. Then I wrote curriculum used nationwide. Now I lead learner-centered product work for a 560-school network at Digital Promise.
+              I spent years teaching STEM in Title I classrooms, including one in downtown Seattle with more than 20 home languages in the room. That's where project-based learning stopped being a philosophy and started being just how I taught. From there I wrote curriculum used nationwide, and now I'm Director of Learner-Centered Experiences at Digital Promise, leading the team that leads our product teams and working with strategy on what we build next.
             </p>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'rgba(255,255,255,0.7)', marginBottom: '18px' }}>
-              Most product people have never taught. Most teachers have never shipped a product. I've done both — which means I design from the learner backward, not the feature forward.
+              I wouldn't call myself the sole product owner — I work in close coordination with our strategy team — but the product work runs through my team. Most product people have never taught. Most teachers have never shipped a product. I've done both, and it means I start from the learner, not the feature.
             </p>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'rgba(255,255,255,0.7)', marginBottom: '36px' }}>
-              Off the clock: I host a science podcast that chases down misconceptions, and I do improv — which, it turns out, is excellent training for stakeholder meetings.
+              I also host a science podcast — Don't Pee on Your Leg and Other Scientific Misconceptions — and do improv. Not a side note: it's part of how I communicate and work with people. Chasing down a misconception on a mic and staying present in a scene with no script are both surprisingly good training for a stakeholder meeting.
             </p>
             <Button variant="yellow" href="#contact">Work with me</Button>
           </div>
