@@ -230,8 +230,8 @@ function Hero() {
 /* ── Proof strip ───────────────────────────────── */
 const STATS = [
   { n: '1000+', label: "schools I've worked directly with", color: 'var(--teal)' },
-  { n: '$1M', label: 'STEM robotics rollout to 180 schools — on time, on budget', color: 'var(--coral)' },
-  { n: '$1M+', label: 'in NIH-funded curriculum delivered across two grants', color: 'var(--pink)' },
+  { n: '$50M+', label: 'in program funding connected to projects I\'ve worked on', color: 'var(--coral)' },
+  { n: '200,000+', label: 'students reached in Title I schools since I joined Digital Promise', color: 'var(--pink)' },
   { n: '13+', label: 'years from Title I classroom to national network', color: 'var(--orange)' },
 ];
 function ProofStrip() {
@@ -250,12 +250,40 @@ function ProofStrip() {
   );
 }
 
+/* ── Point of view ─────────────────────────────── */
+function POVSection() {
+  return (
+    <div style={{ borderTop: '1px solid var(--border-light)', borderBottom: '1px solid var(--border-light)' }}>
+      <div className="section" style={{ paddingTop: 'clamp(48px,7vw,72px)', paddingBottom: 'clamp(48px,7vw,72px)' }}>
+        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--purple)', marginBottom: '10px' }}>Where I stand</p>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h2)', letterSpacing: '-0.02em', color: 'var(--ink)', lineHeight: 1.15, marginBottom: '24px', maxWidth: '720px' }}>
+          Education keeps looking for technology to solve it. It's the wrong question.
+        </h2>
+        <div style={{ maxWidth: '720px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--lg)', lineHeight: 1.75, color: 'var(--ink-muted)', fontWeight: 300 }}>
+            First it was bridging the digital divide — getting devices and access to the students who needed them most, and helping teachers and school leaders actually use that access well. Then it was screen time and digital wellness. Now it's AI, and we're back to the same worry: what is this technology doing to kids.
+          </p>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+            But the question hasn't actually changed: what do learning experiences need to look like so students are prepared — mentally, physically, emotionally — for life after school? What would schools and education products look like if they worked for every student regardless of zip code, from a household of two to a public school system serving millions?
+          </p>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+            I don't think the answer is a better app or a better model. It's building for who a student actually is, instead of handing them a product and asking them to adapt to it. Students should be active in that — able to say "this is who I want to become" — with a system that gives them the people, the material, and the tools to get there. That means real relationships (family, community, staff, other students), rigorous material, and the right support at the right time.
+          </p>
+          <p style={{ fontFamily: 'var(--font-serif)', fontSize: 'var(--h3)', fontWeight: 700, lineHeight: 1.4, color: 'var(--teal-deeper)', marginTop: '8px' }}>
+            Learning and the products for learning should be built for the students, not the other way around.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ── Case studies ──────────────────────────────── */
 const PROJECTS = [
   {
     title: 'Staying ahead of AI in education, on purpose',
     org: 'Digital Promise · Verizon Innovative Learning Schools',
-    description: "Not a single shipped product — an ongoing practice of turning fast-moving AI research into role-differentiated learning for teachers, coaches, and school leaders across a 560-school network.",
+    description: "Not a single shipped product — an ongoing practice of turning fast-moving AI research into role-differentiated learning for teachers, coaches, and school leaders across a 500+ school network.",
     tags: ['AI literacy', 'Practitioner + product', 'LLM tools', 'Ongoing practice'],
     detail: [
       ["Why it's not really \"a product\"", "AI in education is moving fast enough that figuring it out once isn't really an option. So this is closer to a practice than a project: I read the research, go to conferences, and adapt what I know into whatever context needs it — teacher-facing courses, leader briefings, our STEM robotics curriculum, one-off requests from schools that want more specific guidance. A first-year teacher, an instructional coach, and a superintendent aren't getting the same thing from me, because they're not asking the same question."],
@@ -448,6 +476,7 @@ function AboutSection() {
     { label: 'Learning design & measurement', color: 'var(--coral)', desc: 'Turning learning science into products — and building the evidence systems that prove practice actually changed.' },
     { label: 'Program delivery at scale', color: 'var(--yellow)', desc: 'PMP-certified. Multi-vendor, multi-year, physical-plus-digital rollouts that land on time and on budget.' },
     { label: 'Science communication', color: 'var(--pink)', desc: "Podcasting, improv, and years of practice making hard ideas land with people who didn't sign up to learn them." },
+    { label: 'Strategic advisory', color: 'var(--purple)', desc: 'Advising OECD on international AI-literacy guidance, and partnering with Verizon Innovative Learning Schools on national-scale rollouts.' },
   ];
   return (
     <div id="about" style={{ background: 'var(--teal-deeper)', color: '#fff' }}>
@@ -455,9 +484,12 @@ function AboutSection() {
         <div className="about-grid" style={{ display: 'flex', gap: '64px', flexWrap: 'wrap', alignItems: 'flex-start' }}>
           <div style={{ flex: '1 1 340px', minWidth: 0 }}>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--yellow)', marginBottom: '14px' }}>About</p>
-            <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h1)', lineHeight: 1.15, letterSpacing: '-0.02em', color: '#fff', marginBottom: '24px' }}>Classroom → curriculum → product.</h2>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h1)', lineHeight: 1.15, letterSpacing: '-0.02em', color: '#fff', marginBottom: '24px' }}>I keep building the thing before there's a blueprint for it.</h2>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--lg)', lineHeight: 1.75, color: 'rgba(255,255,255,0.85)', marginBottom: '18px', fontWeight: 300 }}>
-              I spent years teaching STEM in Title I classrooms, including one in downtown Seattle with more than 20 home languages in the room. That's where project-based learning stopped being a philosophy and started being just how I taught. From there I wrote curriculum used nationwide, and now I'm Director of Learner-Centered Experiences at Digital Promise, leading the team that leads our product teams and working with strategy on what we build next.
+              I started as a classroom teacher, teaching STEM in Title I schools, including one in downtown Seattle with more than 20 home languages in the room. Then I became a founding teacher at a brand-new charter school. From there I was a founding member of our network's Learning Experience Team, helping build sustainable, personalized learning for every school in the network from scratch. That led to Digital Promise, coaching principals, teachers, and school leaders directly, and now to leading product — a pattern, not a jump.
+            </p>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'rgba(255,255,255,0.7)', marginBottom: '18px' }}>
+              Today I'm Director of Learner-Centered Experiences at Digital Promise, leading a small, agile team of six building learning products for a program that reaches 500+ schools. Since I joined, we've shipped work that's reached over 200,000 students in Title I schools. I've also advised OECD on international AI-literacy guidance and partnered with Verizon Innovative Learning Schools on national rollouts — work that pulls me out of my own team's roadmap and into the bigger conversation about where this field is headed.
             </p>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'rgba(255,255,255,0.7)', marginBottom: '18px' }}>
               I wouldn't call myself the sole product owner — I work in close coordination with our strategy team — but the product work runs through my team. Most product people have never taught. Most teachers have never shipped a product. I've done both, and it means I start from the learner, not the feature.
@@ -472,8 +504,8 @@ function AboutSection() {
               <img src="assets/group.jpg" alt="Camden with fellow facilitators at a conference" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
-            {skills.map(s => (
-              <div key={s.label} style={{ background: 'rgba(255,255,255,0.07)', borderRadius: 'var(--r-lg)', padding: '20px', border: '1px solid rgba(255,255,255,0.12)', backdropFilter: 'blur(4px)' }}>
+            {skills.map((s, i) => (
+              <div key={s.label} style={{ background: 'rgba(255,255,255,0.07)', borderRadius: 'var(--r-lg)', padding: '20px', border: '1px solid rgba(255,255,255,0.12)', backdropFilter: 'blur(4px)', gridColumn: i === skills.length - 1 ? '1 / -1' : 'auto' }}>
                 <div style={{ width: '28px', height: '4px', background: s.color, borderRadius: '2px', marginBottom: '14px' }} />
                 <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1rem', fontWeight: 600, color: '#fff', marginBottom: '7px', lineHeight: 1.3 }}>{s.label}</h3>
                 <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--sm)', color: 'rgba(255,255,255,0.6)', margin: 0, lineHeight: 1.6 }}>{s.desc}</p>
@@ -488,7 +520,7 @@ function AboutSection() {
 }
 
 /* ── Credibility strip ─────────────────────────── */
-const ORGS = ['Digital Promise', 'Verizon Innovative Learning Schools', 'BSCS Science Learning', 'Backyard Brains', 'Knowles Teacher Initiative', 'OECD', 'Kendall Hunt'];
+const ORGS = ['OECD', 'Verizon Innovative Learning Schools', 'Digital Promise', 'BSCS Science Learning', 'Backyard Brains', 'Knowles Teacher Initiative', 'Kendall Hunt'];
 function CredStrip() {
   return (
     <div style={{ borderBottom: '1px solid var(--border-light)' }}>
@@ -586,6 +618,7 @@ function App() {
       <Nav />
       <Hero />
       <ProofStrip />
+      <POVSection />
       <WorkSection />
       <PLSection />
       <AboutSection />
