@@ -230,7 +230,7 @@ function Hero() {
 /* ── Proof strip ───────────────────────────────── */
 const STATS = [
   { n: '1000+', label: "schools I've worked directly with", color: 'var(--teal)' },
-  { n: '$50M+', label: 'in program funding connected to projects I\'ve worked on', color: 'var(--coral)' },
+  { n: '$50M+', label: "in program funding kept on budget — five years stewarding $10M/year, plus direct ownership of a $1M project this year", color: 'var(--coral)' },
   { n: '200,000+', label: 'students reached in Title I schools', color: 'var(--pink)' },
   { n: '13+', label: 'years from Title I classroom to national network', color: 'var(--orange)' },
 ];
@@ -280,6 +280,17 @@ function POVSection() {
 
 /* ── Case studies ──────────────────────────────── */
 const PROJECTS = [
+  {
+    title: 'Rebuilding the team, then the program',
+    org: 'Digital Promise',
+    description: "Brought in to turn a maintenance-only team running disconnected one-off sessions into a product team building a real learner journey — now the model we're scaling beyond our own program.",
+    tags: ['Org transformation', 'Team building', 'Adult learning design', 'Roadmap & process'],
+    detail: [
+      ['What I inherited', "When I joined, the team's job was maintaining a program — running one-off learning experiences for educators in the network with no real throughline between them. I was brought in to build something bigger: a team, and a program, that actually held together."],
+      ['What I built', "We rebuilt it around adult learner competency development — instead of disconnected sessions, a series of learner journeys that let educators practice, get feedback, and grow in specific competencies over time, not just once. I also built the team itself, and wrote the roadmap we still use to align priorities for the year and connect research insight to a real cross-functional product development process — from research to practice, not just research to a report."],
+      ["Where it's headed", "Now we're looking at how the products and services we've built for our own program could support educators, school leaders, district leaders, and state agencies at a much bigger scale — not just the network we started with."],
+    ],
+  },
   {
     title: 'Staying ahead of AI in education, on purpose',
     org: 'Digital Promise · Verizon Innovative Learning Schools',
@@ -489,10 +500,10 @@ function AboutSection() {
               I started as a classroom teacher, teaching STEM in Title I schools, including one in downtown Seattle with more than 20 home languages in the room. Then I became a founding teacher at a brand-new charter school. From there I was a founding member of our network's Learning Experience Team, helping build sustainable, personalized learning for every school in the network from scratch. That led to Digital Promise, coaching principals, teachers, and school leaders directly, and now to leading product — a pattern, not a jump.
             </p>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'rgba(255,255,255,0.7)', marginBottom: '18px' }}>
-              Today I'm Director of Learner-Centered Experiences at Digital Promise, leading a small, agile team of six building learning products for a program that reaches 500+ schools. Since I joined, we've shipped work that's reached over 200,000 students in Title I schools. I've also advised OECD on international AI-literacy guidance and partnered with Verizon Innovative Learning Schools on national rollouts — work that pulls me out of my own team's roadmap and into the bigger conversation about where this field is headed.
+              Today I'm Director of Learner-Centered Experiences at Digital Promise. I was brought in to build a real product team out of what had been a maintenance-only function, and I still lead it: six people building learning products for a program that reaches 500+ schools. Since I joined, we've shipped work that's reached over 200,000 students in Title I schools, and I've stayed on budget the whole way — five years stewarding a $10M/year program budget, plus direct ownership of a $1M project this year. I've also advised OECD on international AI-literacy guidance and partnered with Verizon Innovative Learning Schools on national rollouts — work that pulls me out of my own team's roadmap and into the bigger conversation about where this field is headed.
             </p>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'rgba(255,255,255,0.7)', marginBottom: '18px' }}>
-              I wouldn't call myself the sole product owner — I work in close coordination with our strategy team — but the product work runs through my team. Most product people have never taught. Most teachers have never shipped a product. I've done both, and it means I start from the learner, not the feature.
+              What I'm actually good at, more than any single product, is figuring out what matters most and getting a room to agree on it — reading how a decision is going to land with the people affected by it, and asking the right questions before I make the call instead of after. I wouldn't call myself the sole product owner — I work in close coordination with our strategy team — but the product work runs through my team. Most product people have never taught. Most teachers have never shipped a product. I've done both, and it means I start from the learner, not the feature.
             </p>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'rgba(255,255,255,0.7)', marginBottom: '36px' }}>
               I also host a science podcast — Don't Pee on Your Leg and Other Scientific Misconceptions — and do improv. Not a side note: it's part of how I communicate and work with people. Chasing down a misconception on a mic and staying present in a scene with no script are both surprisingly good training for a stakeholder meeting.
@@ -617,8 +628,8 @@ function App() {
     <div>
       <Nav />
       <Hero />
-      <ProofStrip />
       <POVSection />
+      <ProofStrip />
       <WorkSection />
       <PLSection />
       <AboutSection />
