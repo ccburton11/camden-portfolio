@@ -232,7 +232,7 @@ const STATS = [
   { n: '1000+', label: "schools I've worked directly with", color: 'var(--teal)' },
   { n: '$50M+', label: "in program funding kept on budget", color: 'var(--coral)' },
   { n: '200,000+', label: 'students reached in Title I schools', color: 'var(--pink)' },
-  { n: '13+', label: 'years from Title I classroom to national network', color: 'var(--orange)' },
+  { n: '14+', label: 'years in the education field', color: 'var(--orange)' },
 ];
 function ProofStrip() {
   return (
@@ -263,14 +263,14 @@ function POVSection() {
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--lg)', lineHeight: 1.75, color: 'var(--ink-muted)', fontWeight: 300 }}>
             First it was bridging the digital divide — getting devices and access to the students who needed them most, and helping teachers and school leaders actually use that access well. Then it was screen time and digital wellness. Now it's AI, and we're back to the same worry: what is this technology doing to kids.
           </p>
-          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--lg)', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
             But the question hasn't actually changed: what do learning experiences need to look like so students are prepared — mentally, physically, emotionally — for life after school? What would schools and education products look like if they worked for every student regardless of zip code, from a household of two to a public school system serving millions?
           </p>
-          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
-            I don't think the answer is simply a better app or tools. It's building for who a student actually is, instead of handing them a product and asking them to adapt to it. Students should be active participants in that — able to say "this is who I want to become" — with a system that gives them the people, materials, and the tools to get there. What can products look like that build around authentic relationships, rigorous materials, and provide the right support at the right time?
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--lg)', lineHeight: 1.75, color: 'var(--ink-muted)' }}>
+            I don't think the answer is simply a better app or tools. It's building for who a student actually is, instead of handing them a product and asking them to adapt to it. Students should be active participants in that — able to say "this is who I want to become" — with a system that gives them the people, materials, and the tools to get there. Learning — and the products for learning — should be built for the students, not the other way around.
           </p>
           <p style={{ fontFamily: 'var(--font-serif)', fontSize: 'var(--h3)', fontWeight: 700, lineHeight: 1.4, color: 'var(--teal-deeper)', marginTop: '8px' }}>
-            Learning — and the products for learning — should be built for the students, not the other way around.
+            What can products look like that build around authentic relationships, rigorous materials, and provide the right support at the right time?
           </p>
         </div>
       </div>
@@ -401,7 +401,7 @@ function WorkSection() {
           <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h1)', lineHeight: 1.15, letterSpacing: '-0.02em', color: 'var(--ink)' }}>Learning products.</h2>
         </div>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.7, color: 'var(--ink-muted)', maxWidth: '640px', marginBottom: '36px' }}>
-          I like to sit where research, strategy, and rapid prototyping meet. I work with our strategy and finance team on what gets funded, with our research team on what the evidence says, and with our prototyping team on what's actually worth testing — from first insight to something that scales across the network. The work below is what's come out of that.
+          I like to sit where research, strategy, and rapid prototyping meet. Whether it's developing the strategy, coordinating budgets, digging through research, I love working from the very nascent insights to building something that scales across a network. I love working with people, who are our most important asset in the work, and it's through building strong relationships and in collaboration that the following great work has arisen.
         </p>
         <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(320px,1fr))', gap: '24px', alignItems: 'start' }}>
           {PROJECTS.map((p, i) => <ProjectCard key={p.title} project={p} colorIdx={i} />)}
@@ -599,9 +599,9 @@ function ContactSection() {
           </div>
         </div>
         <div style={{ flex: '1 1 340px', background: 'var(--teal-light)', border: '1px solid var(--teal)', borderRadius: 'var(--r-xl)', padding: '32px' }}>
-          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 'var(--h3)', fontWeight: 700, color: 'var(--teal-deeper)', marginBottom: '10px' }}>Want the full résumé?</h3>
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 'var(--h3)', fontWeight: 700, color: 'var(--teal-deeper)', marginBottom: '10px' }}>Want to connect?</h3>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--sm)', lineHeight: 1.7, color: 'var(--ink-muted)', marginBottom: '20px' }}>
-            One email and it's in your inbox — tailored to the role if you tell me what you're hiring for.
+            I'd love to connect and learn more about your work!
           </p>
           <Button variant="teal" href={'mailto:' + EMAIL + '?subject=R%C3%A9sum%C3%A9%20request'}>Email me →</Button>
         </div>
