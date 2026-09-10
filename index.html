@@ -574,8 +574,8 @@ function PubsSection() {
   return (
     <div id="publications">
       <div className="section" style={{ paddingTop: 'clamp(48px,7vw,72px)', paddingBottom: 'clamp(48px,7vw,72px)' }}>
-        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--pink)', marginBottom: '10px' }}>Publications & speaking</p>
-        <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h2)', letterSpacing: '-0.02em', color: 'var(--ink)', lineHeight: 1.15, marginBottom: '28px' }}>Receipts, in print.</h2>
+        <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--pink)', marginBottom: '10px' }}>Publications & Consulting</p>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 800, fontSize: 'var(--h2)', letterSpacing: '-0.02em', color: 'var(--ink)', lineHeight: 1.15, marginBottom: '28px' }}>A selection of some recent work</h2>
         {PUBS.map((p, i) => (
           <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: '24px', padding: '18px 0', borderBottom: i < PUBS.length - 1 ? '1px solid var(--border)' : 'none', flexWrap: 'wrap' }}>
             <span style={{ fontFamily: 'var(--font-serif)', fontSize: 'var(--base)', color: 'var(--ink)', fontWeight: 600, flex: '1 1 260px', lineHeight: 1.4 }}>{p.what}</span>
