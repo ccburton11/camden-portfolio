@@ -456,51 +456,11 @@ function PLShotCard({ shot, colorIdx }) {
   );
 }
 
-/* ── Professional learning showcase with easter egg ────────────── */
 function PLSection() {
-  const [showCallout, setShowCallout] = React.useState(false);
-  const [sectionRef, setSectionRef] = React.useState(null);
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setShowCallout(true);
-        } else if (entry.boundingClientRect.top > 0) {
-          setShowCallout(false);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    if (sectionRef) observer.observe(sectionRef);
-    return () => { if (sectionRef) observer.unobserve(sectionRef); };
-  }, [sectionRef]);
+  const [hoveredCard, setHoveredCard] = React.useState(null);
 
   return (
-    <div id="pl" style={{ borderBottom: '1px solid var(--border-light)', position: 'relative' }} ref={setSectionRef}>
-      {showCallout && (
-        <div style={{
-          position: 'fixed', top: '200px', right: '40px', zIndex: 50,
-          opacity: showCallout ? 1 : 0, transition: 'opacity 0.4s ease',
-          pointerEvents: 'none'
-        }}>
-          <div style={{
-            background: 'var(--pink)', color: '#fff', padding: '12px 16px',
-            borderRadius: '8px', fontSize: '0.875rem', fontWeight: 600,
-            fontFamily: 'var(--font-sans)', maxWidth: '200px', lineHeight: 1.4,
-            boxShadow: 'var(--shadow-md)'
-          }}>
-            I swear I have more than one outfit. This wasn't even the same session!
-            <div style={{
-              position: 'absolute', left: '-10px', top: '12px',
-              width: 0, height: 0,
-              borderRight: '10px solid var(--pink)',
-              borderTop: '6px solid transparent',
-              borderBottom: '6px solid transparent'
-            }} />
-          </div>
-        </div>
-      )}
+    <div id="pl" style={{ borderBottom: '1px solid var(--border-light)', position: 'relative' }}>
       <div className="section">
         <div style={{ marginBottom: '16px' }}>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--pink)', marginBottom: '10px' }}>Professional learning</p>
@@ -509,8 +469,30 @@ function PLSection() {
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--base)', lineHeight: 1.7, color: 'var(--ink-muted)', maxWidth: '640px', marginBottom: '36px' }}>
           A few snapshots from courses and sessions I've built and led.
         </p>
-        <div className="plgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
-          {PL_SHOTS.map((s, i) => <PLShotCard key={s.img} shot={s} colorIdx={i} />)}
+        <div className="plgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', position: 'relative' }}>
+          {PL_SHOTS.map((s, i) => (
+            <div key={s.img} onMouseEnter={() => setHoveredCard(i)} onMouseLeave={() => setHoveredCard(null)} style={{ position: 'relative' }}>
+              <PLShotCard shot={s} colorIdx={i} />
+              {hoveredCard === PL_SHOTS.length - 1 && i === PL_SHOTS.length - 1 && (
+                <div style={{
+                  position: 'absolute', bottom: '20px', left: '-220px', zIndex: 50,
+                  background: 'var(--pink)', color: '#fff', padding: '12px 16px',
+                  borderRadius: '8px', fontSize: '0.875rem', fontWeight: 600,
+                  fontFamily: 'var(--font-sans)', width: '200px', lineHeight: 1.4,
+                  boxShadow: 'var(--shadow-md)', whiteSpace: 'normal'
+                }}>
+                  I swear I have more than one outfit. This wasn't even the same session!
+                  <div style={{
+                    position: 'absolute', right: '-10px', top: '12px',
+                    width: 0, height: 0,
+                    borderLeft: '10px solid var(--pink)',
+                    borderTop: '6px solid transparent',
+                    borderBottom: '6px solid transparent'
+                  }} />
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>
