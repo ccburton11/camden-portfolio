@@ -456,9 +456,51 @@ function PLShotCard({ shot, colorIdx }) {
   );
 }
 
+/* ── Professional learning showcase with easter egg ────────────── */
 function PLSection() {
+  const [showCallout, setShowCallout] = React.useState(false);
+  const [sectionRef, setSectionRef] = React.useState(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setShowCallout(true);
+        } else if (entry.boundingClientRect.top > 0) {
+          setShowCallout(false);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    if (sectionRef) observer.observe(sectionRef);
+    return () => { if (sectionRef) observer.unobserve(sectionRef); };
+  }, [sectionRef]);
+
   return (
-    <div id="pl" style={{ borderBottom: '1px solid var(--border-light)' }}>
+    <div id="pl" style={{ borderBottom: '1px solid var(--border-light)', position: 'relative' }} ref={setSectionRef}>
+      {showCallout && (
+        <div style={{
+          position: 'fixed', top: '200px', right: '40px', zIndex: 50,
+          opacity: showCallout ? 1 : 0, transition: 'opacity 0.4s ease',
+          pointerEvents: 'none'
+        }}>
+          <div style={{
+            background: 'var(--pink)', color: '#fff', padding: '12px 16px',
+            borderRadius: '8px', fontSize: '0.875rem', fontWeight: 600,
+            fontFamily: 'var(--font-sans)', maxWidth: '200px', lineHeight: 1.4,
+            boxShadow: 'var(--shadow-md)'
+          }}>
+            I swear I have more than one outfit. This wasn't even the same session!
+            <div style={{
+              position: 'absolute', left: '-10px', top: '12px',
+              width: 0, height: 0,
+              borderRight: '10px solid var(--pink)',
+              borderTop: '6px solid transparent',
+              borderBottom: '6px solid transparent'
+            }} />
+          </div>
+        </div>
+      )}
       <div className="section">
         <div style={{ marginBottom: '16px' }}>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--xs)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--pink)', marginBottom: '10px' }}>Professional learning</p>
@@ -482,7 +524,7 @@ function AboutSection() {
     { label: 'Learning design & measurement', color: 'var(--coral)', desc: 'Turning learning science into products — and building the evidence systems that prove practice actually changed.' },
     { label: 'Program delivery at scale', color: 'var(--yellow)', desc: 'PMP-certified. Multi-vendor, multi-year, physical-plus-digital rollouts that land on time and on budget.' },
     { label: 'Science communication', color: 'var(--pink)', desc: "Podcasting, improv, and years of practice making hard ideas land with people who didn't sign up to learn them." },
-    { label: 'Strategic advisory', color: 'var(--purple)', desc: 'Advising OECD on international AI-literacy guidance, and partnering with Verizon Innovative Learning Schools on national-scale rollouts.' },
+    { label: 'Strategic advisory', color: 'var(--purple)', desc: 'Advising on international AI-literacy guidance (OECD and Education Above all), and partnering with larger partners (Verizon Innovative Learning Schools, Knowles Teacher Initiative) on national-scale rollouts.' },
   ];
   return (
     <div id="about" style={{ background: 'var(--teal-deeper)', color: '#fff' }}>
